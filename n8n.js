@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- PASTE YOUR N8N WEBHOOK URL HERE ---
     // This is the 'Test URL' you copied from your n8n Webhook node
-    const n8nWebhookUrl = 'https://n8n.malluseller.shop/webhook/86a507cc-a790-40f3-a060-75aed057e802';
+    const n8nWebhookUrl = 'https://n8n.malluseller.shop/webhook/6158eeaf-82fc-4ffd-b35c-6629e4c77fc1';
 
     // Add an event listener for when the user submits the form
     chatForm.addEventListener('submit', (event) => {
@@ -92,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Display the bot's reply
             // We expect the data to have a 'reply' field, based on our 'Set' node
             if (data.output) {
+                console.log(data.output);
+                
                 displayMessage(data.output, 'bot');
             } else {
                 displayMessage('Sorry, I had trouble getting a response.', 'bot');
